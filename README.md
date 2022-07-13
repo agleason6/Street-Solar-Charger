@@ -33,24 +33,24 @@ MPPT, embedded code development, python, ...
 
 ### Component Requirements
 1) Inductor
-  *You can wind up an inductor with some wire and a nail. When winding the inductor you can wind up and down (overlap)
+  * You can wind up an inductor with some wire and a nail. When winding the inductor you can wind up and down (overlap)
   as long as you keep the direction of the turns the same (current flow). Keep turns tightly wound together and minimize
   gaps between turns.
 2) Power Switch
-  *I used a Solid State Power Relay which can only be switched at low frequencies (max around 200Hz).
+  * I used a Solid State Power Relay which can only be switched at low frequencies (max around 200Hz).
   *Ensure that the switch can handle the maximum current required.
 3) Opamp
-  *The only real requirement for the opamp is that it be able to handle the supply voltage of the solar
+  * The only real requirement for the opamp is that it be able to handle the supply voltage of the solar
   panel, input biased at mid supply. I happen to have an OP295 handy.
 4) Instrumentation AMP
   * Same story as Oamp, the Instrumentation AMP needs to be able to handle the supply voltage of the solar
   panel. If you don't have an INAMP handy, you can build a differencing amplifier using opamps, just make the 
   resistances large to not load down the input divider and bias and create offset, I used an AD620. 
 3) Power Diode
-  *I used the body diode of an NMOS Power FET cut off from my broken charger. The power diode needs to be 
+  * I used the body diode of an NMOS Power FET cut off from my broken charger. The power diode needs to be 
   able to handle the charging current.
 4) 2.5V Reference
-  *Must be able to handle solar open circuit voltage.
+  * Must be able to handle solar open circuit voltage.
 
 ## Theory of Operation
 The charger works by measuring the input solar voltage, output battery voltage, and inductor voltage 
