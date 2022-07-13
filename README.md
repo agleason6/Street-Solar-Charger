@@ -26,7 +26,7 @@ MPPT, embedded code development, python, ...
 4) 12V Automotive Lead Acid Battery
 
 ## Buck Converter Circuit
-**Schematic Download Link**
+**Schematic PDF in Repo**
 
 ### Power Sequence Requirement
 **Ensure that you have the solar panel connected first before connecting the battery**
