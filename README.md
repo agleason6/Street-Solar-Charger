@@ -79,20 +79,20 @@ is where a Boost (Buck-Boost)could help increase energy harvesting, to allow har
 1) Keep your battery in a well ventilated area
   * Batteries can produce H2 (Hydrogen Gas) which is extremely flammable.
 1) Don't overcharge your battery
-  *The chemistry behind battery charging is that when you apply a voltage
+  * The chemistry behind battery charging is that when you apply a voltage
   to the terminals that is greater than the battery open circuit voltage (no load)
   it will break down the water in the battery and create H+ and O2 which breaks down the PbSO4 that forms
   on the terminals during discharge (creates more sulfuric acid); electrons forced into the negative terminal 
   break down the PbSO4 on the negative terminal and create more sulfuric acid. If you apply too much voltage it 
   can generate H2 (hydrogen gas) which is HIGHLY FLAMMABLE, if not ventilated can create a fire hazard.
 2) Implement a Current Limiting Mechanism
-  *To be safe, you will want to implement a current measurement and/or add a current limit, which can be done in muliple ways. 
+  * To be safe, you will want to implement a current measurement and/or add a current limit, which can be done in muliple ways. 
   1) Make the inductor way smaller (60x) than it needs to be based off the Buck Converter Lmin Equation
-    *This prevent continous current operation and thus limit the current (current goes to 0 during negative duty cycle). 
+    * This prevent continous current operation and thus limit the current (current goes to 0 during negative duty cycle). 
   2) Know the precise value of your inductor and divide the integral by it or add a sense resistor to the circuit 
   or some kind of current measurement (IC) and feed that into the system; need to modify code.
-    *Check it during the MPPT state, if the current gets too high then back off the duty cycle, if the current 
+    * Check it during the MPPT state, if the current gets too high then back off the duty cycle, if the current 
     polarity changes then increase the duty cycle or change state to DONE. 
-    *This algorithm neglects current and just target's maximum power, it doesn't care about what the current level is. 
+    * This algorithm neglects current and just target's maximum power, it doesn't care about what the current level is. 
   3) Be aware of your manufacturer's charging recommendations for your battery, the maximum charging current limit 
   will depend on your battery and manufacturer's recomendations for charging, heed them to be safe.  
