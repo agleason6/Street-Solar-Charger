@@ -85,7 +85,7 @@ is where a Boost (Buck-Boost)could help increase energy harvesting, to allow har
   on the terminals during discharge (creates more sulfuric acid); electrons forced into the negative terminal 
   break down the PbSO4 on the negative terminal and create more sulfuric acid. If you apply too much voltage it 
   can generate H2 (hydrogen gas) which is HIGHLY FLAMMABLE, if not ventilated can create a fire hazard.
-2) Implement a Current Limiting Mechanism
+3) Implement a Current Limiting Mechanism
   * To be safe, you will want to implement a current measurement and/or add a current limit, which can be done in muliple ways. 
   1) Make the inductor way smaller (60x) than it needs to be based off the Buck Converter Lmin Equation
     * This prevent continous current operation and thus limit the current (current goes to 0 during negative duty cycle). 
@@ -94,5 +94,5 @@ is where a Boost (Buck-Boost)could help increase energy harvesting, to allow har
     * Check it during the MPPT state, if the current gets too high then back off the duty cycle, if the current 
     polarity changes then increase the duty cycle or change state to DONE. 
     * This algorithm neglects current and just target's maximum power, it doesn't care about what the current level is. 
-3) Be aware of your manufacturer's charging recommendations for your battery, the maximum charging current limit 
+4) Be aware of your manufacturer's charging recommendations for your battery, the maximum charging current limit 
   will depend on your battery and manufacturer's recomendations for charging, heed them to be safe.  
