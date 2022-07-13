@@ -87,9 +87,9 @@ is where a Boost (Buck-Boost)could help increase energy harvesting, to allow har
   can generate H2 (hydrogen gas) which is HIGHLY FLAMMABLE, if not ventilated can create a fire hazard.
 2) Implement a Current Limiting Mechanism
   * To be safe, you will want to implement a current measurement and/or add a current limit, which can be done in muliple ways. 
-  a) Make the inductor way smaller (60x) than it needs to be based off the Buck Converter Lmin Equation
+  1) Make the inductor way smaller (60x) than it needs to be based off the Buck Converter Lmin Equation
     * This prevent continous current operation and thus limit the current (current goes to 0 during negative duty cycle). 
-  b) Know the precise value of your inductor and divide the integral by it or add a sense resistor to the circuit 
+  2) Know the precise value of your inductor and divide the integral by it or add a sense resistor to the circuit 
   or some kind of current measurement (IC) and feed that into the system; need to modify code.
     * Check it during the MPPT state, if the current gets too high then back off the duty cycle, if the current 
     polarity changes then increase the duty cycle or change state to DONE. 
